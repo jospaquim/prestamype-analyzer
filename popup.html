@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamype Analyzer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>💰 Prestamype Analyzer</h1>
+                </div>
+                <div class="header-right">
+                    <button class="config-btn" id="configBtn" title="Configuración">
+                        <span class="icon">⚙️</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="actions">
+            <button id="analyzeBtn" class="btn-primary btn-compact">🔍 Analizar</button>
+            <button id="clearBtn" class="btn-secondary btn-compact">🗑️ Limpiar</button>
+        </div>
+
+        <div id="results" class="results-section hidden">
+            <h3>📊 Análisis de oportunidades</h3>
+            <div id="summary" class="summary"></div>
+            <div id="recommendations" class="recommendations"></div>
+            <div id="opportunitiesList" class="opportunities-list"></div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analizando oportunidades...</p>
+        </div>
+
+        <div id="error" class="error hidden">
+            <p>❌ Error al analizar la página. Asegúrate de estar en Prestamype.com</p>
+        </div>
+    </div>
+
+    <!-- Configuration Modal -->
+    <div id="configModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚙️ Configuración</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="currency">Moneda:</label>
+                    <select id="currency">
+                        <option value="PEN">PEN (Soles)</option>
+                        <option value="USD">USD (Dólares)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="budget">Presupuesto disponible:</label>
+                    <div class="currency-input">
+                        <span class="currency-symbol">S/</span>
+                        <input type="number" id="budget" placeholder="10000" min="100" step="1">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="minReturn">Rentabilidad mínima (%):</label>
+                    <input type="number" id="minReturn" placeholder="8" min="0" step="0.1">
+                </div>
+                <div class="input-group">
+                    <label for="maxRisk">Riesgo máximo aceptable:</label>
+                    <select id="maxRisk">
+                        <option value="A">A (Muy Bajo)</option>
+                        <option value="B">B (Bajo)</option>
+                        <option value="C">C (Medio)</option>
+                        <option value="D">D (Alto)</option>
+                        <option value="E">E (Muy Alto)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="saveConfig" class="btn-primary">💾 Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
