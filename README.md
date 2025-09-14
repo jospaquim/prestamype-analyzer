@@ -4,7 +4,7 @@ Una extensión de Chrome que analiza y evalúa oportunidades de inversión en Pr
 
 ## 📸 Demo
 
-<img src="demo.png" alt="Prestamype Analyzer Demo" style="max-width: 400px; width: 100%;" />
+<img src="demo.png" alt="Prestamype Analyzer Demo" style="max-width: 150px; width: 100%;" />
 
 ## 🚀 Características
 
