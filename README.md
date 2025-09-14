@@ -1,6 +1,10 @@
 # 💰 Prestamype Analyzer (WIP)
 
-Una extensión de Chrome que analiza y evalúa oportunidades de inversión en Prestamype.com con un sistema inteligente de scoring.
+Una extensión de Chrome que analiza y evalúa oportunidades de inversión en Prestamype.com con simulaciones personalizadas y diseño estilo Kindle.
+
+## 📸 Demo
+
+<img src="demo.png" alt="Prestamype Analyzer Demo" style="max-width: 400px; width: 100%;" />
 
 ## 🚀 Características
 
